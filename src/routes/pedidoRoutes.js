@@ -11,6 +11,6 @@ router.get('/', getPedidos);
 router.get('/:id', validateId, getPedidoById);
 router.post('/', restrictTo('admin', 'operador'), createPedido);
 router.put('/:id', validateId, restrictTo('admin', 'operador'), updatePedido);
-router.delete('/:id', validateId, restrictTo('admin', 'operador'), deletePedido);
+router.delete('/:id', validateId, restrictTo('admin'), deletePedido);
 
 export default router;
